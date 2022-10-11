@@ -29,13 +29,13 @@ Sardar Patel Institute of Technology <br/>
 
 ## Lab 5
 - make your own cryptocurrency (open zeppelin and erc20 tokens used) and deploy it
-- - configure your metamask and import your token by giving the contract address
-- - send tokens from one account to another
+    - configure your metamask and import your token by giving the contract address
+    - send tokens from one account to another
 ## Lab 6
 - Lottery System Dapp
-- - After compiling deploy the contract (manager account)
-- - transact 2 ether using 3 other acc
-- - switch back to manager account
-- - check balance (manager)
-- - select winner
-- - check account of winner (ether would be deposited to his account)
+    - After compiling deploy the contract (manager account)
+    - transact 2 ether using 3 other acc
+    - switch back to manager account
+    - check balance (manager)
+    - select winner
+    - check account of winner (ether would be deposited to his account)
