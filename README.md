@@ -41,7 +41,7 @@ Sardar Patel Institute of Technology <br/>
     - check account of winner (ether would be deposited to his account)
 
 ## lab 7
--Learning Ganache,Truffle (VS Code)
+- Learning Ganache,Truffle (VS Code)
     - Credit Limit Program
     - npm install -g truffle, truffle vscode extension
     - download ganache (https://trufflesuite.com/ganache/)
