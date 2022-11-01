@@ -39,3 +39,7 @@ Sardar Patel Institute of Technology <br/>
     - check balance (manager)
     - select winner
     - check account of winner (ether would be deposited to his account)
+
+## lab 7
+-Learning Ganache,Truffle
+    - Credit Limit Program
