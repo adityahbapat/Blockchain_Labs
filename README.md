@@ -53,9 +53,9 @@ Sardar Patel Institute of Technology <br/>
 
 ## lab 8
 - Creating directly from OpenSea
- - Create Collection: https://testnets.opensea.io/collection/sporty-club
- - Upload Image and create NFT
- - NFT Link: https://testnets.opensea.io/assets/mumbai/0x2953399124f0cbb46d2cbacd8a89cf0599974963/14327623316663528033959644203702501411256809048170392790279868205446660620289
+    - Create Collection: https://testnets.opensea.io/collection/sporty-club
+    - Upload Image and create NFT
+    - NFT Link: https://testnets.opensea.io/assets/mumbai/0x2953399124f0cbb46d2cbacd8a89cf0599974963/14327623316663528033959644203702501411256809048170392790279868205446660620289
 
 - Creating Own NFT
     - Upload Image and JSON file (Opensea Metadata Standards) on IPFS filebase bucket
