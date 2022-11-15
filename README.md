@@ -49,3 +49,23 @@ Sardar Patel Institute of Technology <br/>
     - paste credit limit code inside contracts folder and do truffle compile
     - see json file in build folder
     - explore truffle-config.js
+
+
+## lab 8
+- Creating directly from OpenSea
+ - Create Collection: https://testnets.opensea.io/collection/sporty-club
+ - Upload Image and create NFT
+ - NFT Link: https://testnets.opensea.io/assets/mumbai/0x2953399124f0cbb46d2cbacd8a89cf0599974963/14327623316663528033959644203702501411256809048170392790279868205446660620289
+
+- Creating Own NFT
+    - Upload Image and JSON file (Opensea Metadata Standards) on IPFS filebase bucket
+    - Head to https://docs.openzeppelin.com/contracts/4.x/wizard and select ERC 721
+    - choose option mintable, auto-increment-id, enumerable, uri storage
+    - run code on remix and select metamask wallet
+    - Deploy Contract (Polygon Matic faucets used)
+    - in json put img link as - https://ipfs.io/ipfs/QmTYmNpSWtdvn5jnQMaPkdpgGDLhXGxThHxKP6DnttUYfW
+    - last part of the link is the cid we get from filebase
+    - in mint function after deployment enter our metamask address and uri(json file-https://ipfs.io/ipfs/QmbjadRHfNAVPnxdZbCZX6Z1XXHj5J7nM9dgvup8cBg1tY) and click transact
+    - Ref link(https://www.section.io/engineering-education/how-to-deploy-an-nft-with-remix-ide-and-opensea/)
+    - you can then change collection info from Opensea ui
+    - nft link - https://testnets.opensea.io/assets/mumbai/0xad841928082603cd197f43ebbc645cd426ddba59/0
