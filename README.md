@@ -69,3 +69,11 @@ Sardar Patel Institute of Technology <br/>
     - Ref link(https://www.section.io/engineering-education/how-to-deploy-an-nft-with-remix-ide-and-opensea/)
     - you can then change collection info from Opensea ui
     - nft link - https://testnets.opensea.io/assets/mumbai/0xad841928082603cd197f43ebbc645cd426ddba59/0
+
+## lab 8
+- Crowd Funding Dapp
+    - Multiple events
+    - acc to voting one event chosen who receives all the fund
+    - During Deployment specify target and deadline(3600 = 1 hour) then deploy
+    - Min contribution = 100 wei
+    - enter your amount in wei in value input in remix and click sendEth to contribute
