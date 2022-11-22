@@ -1,4 +1,4 @@
-//SPDX-License-Identifier:MIT
+// SPDX-License-Identifier:MIT
 // Aditya Bapat 
 // BE IT 2019140007
 
@@ -77,7 +77,7 @@ contract crowdFunding {
         // if thisRequest.voters[msg.sender] = true means contributor has voted
         require(thisRequest.voters[msg.sender] == false,"You have already voted");
         thisRequest.voters[msg.sender] = true;
-        thisRequest.completed = true;
+        thisRequest.noOfVoters++;
     }
 
     function makePayment(uint _requestNo) public onlyManager{
