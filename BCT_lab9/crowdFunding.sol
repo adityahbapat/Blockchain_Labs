@@ -14,6 +14,9 @@ contract crowdFunding {
     // address of contributor mapped with his contribution
     mapping(address=>uint) public contributors;
 
+    // storing address of contributors
+    mapping(uint=>address) public addressContributors;
+
     // request stands for events registered for crowdfunding
     // eg: blanket giving, food giving etc
     // after voting is done event with max votes gets all the money
@@ -53,6 +56,7 @@ contract crowdFunding {
         // check if particular contributor has contributed early or not
         if(contributors[msg.sender] == 0){
             // if not contributed increment unique contributors count
+            addressContributors[noOfContributors] = msg.sender;
             noOfContributors++;
         }
         contributors[msg.sender] += msg.value;
@@ -101,4 +105,18 @@ contract crowdFunding {
         user.transfer(contributors[msg.sender]);
         contributors[msg.sender] = 0;
     }
+
+    // variation
+    // cancel Crowdfunding
+    // return everyone's money
+    function cancelCrowdFunding() public onlyManager{
+        for(uint i = 0; i < noOfContributors; i++){
+            if(contributors[addressContributors[i]] > 0){
+                address payable user = payable(addressContributors[i]);
+                user.transfer(contributors[addressContributors[i]]);
+                raisedAmount -= contributors[addressContributors[i]];
+                contributors[addressContributors[i]] = 0;
+            }
+        }
+    } 
 }
