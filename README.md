@@ -79,5 +79,5 @@ Sardar Patel Institute of Technology <br/>
     - enter your amount in wei in value input in remix and click sendEth to contribute
 
 
-## lab 10
+## lab 9
 - Connect Frontend with Solidity
