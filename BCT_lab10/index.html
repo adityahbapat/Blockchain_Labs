@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aditya University admission form</title>
+        <style>
+        body {
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      
+        div {
+          width: 20%;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+        }
+      
+        button {
+          width: 100%;
+          margin: 10px 0px 5px 0px;
+        }
+        </style>
+  </head>
+  <body>
+    <div>
+      <h1>Welcome to Aditya University!</h1>
+      <p>Let's get you onboard</p>
+      <label for="name">Name:</label> 
+      <input type="text" id="name" />
+
+      <br />
+
+      <label for="email">Email:</label> 
+      <input type="email" id="email" />
+
+      <br />
+
+      <label for="contact">Contact:</label> 
+      <input type="number" id="contact" />
+
+      <br />
+
+      <label for="College"> College Name:</label> 
+      <input type="text" id="college" />
+      <br /><br />
+
+      <button onclick="set()">Submit</button>
+
+      <button onclick="get()">Retrieve</button>
+
+    </div>
+
+      <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+      <script>
+        const provider = new ethers.providers.Web3Provider(
+          window.ethereum,
+          "Mumbai Testnet"
+        );
+    
+        const ContractAddress = "0x507Eed16cC5560a977Bb78854e12C72baCE458A1";
+
+        const ContractABI = [
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_email",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_contact",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_college",
+				"type": "string"
+			}
+		],
+		"name": "set",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [],
+		"name": "retrieve",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+    let backend;
+    let signer;
+
+    provider.send("eth_requestAccounts", []).then(() => {
+      provider.listAccounts().then(function (accounts) {
+        signer = provider.getSigner(accounts[0]);
+        backend = new ethers.Contract(
+          ContractAddress,
+          ContractABI,
+          signer
+        );
+      });
+    }); 
+
+    
+
+    // async function retrieve() {
+    //   const mood = document.getElementById("mood").value;
+    //   const setMoodPromise = MoodContract.setMood(mood);
+    //   await setMoodPromise;
+    // }
+
+    async function get() {
+      const getPromise = backend.retrieve();
+      const Details = await getPromise;
+      console.log(Details);
+    }
+
+    async function set() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const contact = document.getElementById("contact").value;
+      const college = document.getElementById("college").value;
+      const setPromise = backend.set(name, email, contact, college);
+      await setMoodPromise;
+    }
+
+
+  </script>
+    
+  </body>
+</html>

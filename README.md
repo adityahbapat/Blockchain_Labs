@@ -77,3 +77,7 @@ Sardar Patel Institute of Technology <br/>
     - During Deployment specify target and deadline(3600 = 1 hour) then deploy
     - Min contribution = 100 wei
     - enter your amount in wei in value input in remix and click sendEth to contribute
+
+
+## lab 10
+- Connect Frontend with Solidity
