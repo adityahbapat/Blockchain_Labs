@@ -70,7 +70,7 @@ Sardar Patel Institute of Technology <br/>
     - you can then change collection info from Opensea ui
     - nft link - https://testnets.opensea.io/assets/mumbai/0xad841928082603cd197f43ebbc645cd426ddba59/0
 
-## lab 8
+## lab 9
 - Crowd Funding Dapp
     - Multiple events
     - acc to voting one event chosen who receives all the fund
