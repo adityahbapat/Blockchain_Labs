@@ -5,6 +5,8 @@ UID: 2019140007 <br/>
 BE - IT <br/>
 Sardar Patel Institute of Technology <br/>
 
+# Labs (1 - 10)
+
 ## Lab 1
 - Hello Solidity
 - Counter program
@@ -79,5 +81,5 @@ Sardar Patel Institute of Technology <br/>
     - enter your amount in wei in value input in remix and click sendEth to contribute
 
 
-## lab 9
+## lab 10
 - Connect Frontend with Solidity
